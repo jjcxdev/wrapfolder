@@ -20,12 +20,12 @@ const CallSheet = () => {
         <div className="flex w-1/2 flex-col justify-center bg-black py-1 text-[12px] font-bold text-white">
           <span className="flex justify-center text-center"> PRODUCTION </span>
           <div className="flex justify-around bg-zinc-700 text-[8px]">
-            <div>ROLE</div>
-            <div>NAME</div>
-            <div>CONTACT</div>
-            <div>EMAIL</div>
-            <div>LOC</div>
-            <div>CALL</div>
+            <div className="flex w-1/6">ROLE</div>
+            <div className="flex w-1/4">NAME</div>
+            <div className="flex w-1/6">CONTACT</div>
+            <div className="flex w-1/3">EMAIL</div>
+            <div className="flex w-1/12">LOC</div>
+            <div className="flex w-1/12">CALL</div>
           </div>
           <div className="flex max-w-fit text-[7px]">
             <input
@@ -65,81 +65,6 @@ const CallSheet = () => {
         </div>
       </div>
 
-      <div className="h-3 w-full bg-neutral-400 ">
-        <hr />
-      </div>
-      <div className={styles.row}>
-        <div className={styles.column}>
-          <h2>Product</h2>
-        </div>
-        <div className={styles.column}>
-          <h2>Call Time</h2>
-        </div>
-        <div className={styles.column}>
-          <h2>Location</h2>
-        </div>
-      </div>
-      <div className="h-3 w-full bg-neutral-400 ">
-        <hr />
-      </div>
-      <div className={styles.row}>
-        <div className={styles.column}>
-          <p>Product details</p>
-        </div>
-        <div className={styles.column}>
-          <p>Call time details</p>
-        </div>
-        <div className={styles.column}>
-          <p>Location details</p>
-        </div>
-      </div>
-      <div className="h-3 w-full bg-neutral-400 ">
-        <hr />
-      </div>
-      <div className={styles.row}>
-        <div className={styles.column}>
-          <h2>Production Numbers</h2>
-        </div>
-        <div className={styles.column}>
-          <h2>Hospital</h2>
-        </div>
-        <div className={styles.column}>
-          <h2>Weather</h2>
-        </div>
-      </div>
-      <div className="h-3 w-full bg-neutral-400 ">
-        <hr />
-      </div>
-      <div className={styles.row}>
-        <div className={styles.column}>
-          <p>Production numbers details</p>
-        </div>
-        <div className={styles.column}>
-          <p>Hospital details</p>
-        </div>
-        <div className={styles.column}>
-          <p>Weather details</p>
-        </div>
-      </div>
-      <div className="h-3 w-full bg-neutral-400 ">
-        <hr />
-      </div>
-      <div className={styles.row}>
-        <div className={styles.column}>
-          <h2>Production</h2>
-        </div>
-        <div className={styles.column}>
-          <h2>Agency</h2>
-        </div>
-      </div>
-      <div className="h-3 w-full bg-neutral-400 ">
-        <hr />
-      </div>
-      <div className={styles.emptyRow} />
-      <div className={styles.emptyRow} />
-      <div className="h-3 w-full bg-neutral-400 ">
-        <hr />
-      </div>
       <div className={styles.row}>
         <div className={styles.column}>
           <h2>Payment Info</h2>
