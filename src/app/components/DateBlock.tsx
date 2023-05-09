@@ -19,14 +19,14 @@ const DateBlock = () => {
         <span className="mx-1 text-3xl"> Day </span>
         <input
           type="text"
-          className="w-20 rounded border border-gray-300 px-2 py-1 text-center text-6xl font-bold"
-          placeholder="1"
+          className="w-20  px-2 py-1 text-center text-6xl font-bold placeholder:bg-red-300 placeholder:text-black"
+          placeholder="..."
         />
         <span className="mx-1 text-3xl"> of </span>
         <input
           type="text"
-          className="w-20 rounded border border-gray-300 px-2 py-1 text-center text-6xl font-bold"
-          placeholder="1"
+          className="w-20  px-2 py-1 text-center text-6xl font-bold placeholder:bg-red-300 placeholder:text-black"
+          placeholder="..."
         />
       </div>
 
