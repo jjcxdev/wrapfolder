@@ -6,6 +6,7 @@ import LogoBlock from "./components/LogoBlock";
 import CompanyBlock from "./components/CompanyBlock";
 import JobBlock from "./components/JobBlock";
 import WeatherBlock from "./components/WeatherBlock";
+import GridBlock from "./components/GridBlock";
 
 const CallSheet = () => {
   return (
@@ -15,55 +16,7 @@ const CallSheet = () => {
       <CompanyBlock />
       <JobBlock />
       <WeatherBlock />
-
-      <div className="flex w-full ">
-        <div className="flex w-1/2 flex-col justify-center bg-black py-1 text-[12px] font-bold text-white">
-          <span className="flex justify-center text-center"> PRODUCTION </span>
-          <div className="flex justify-around bg-zinc-700 text-[8px]">
-            <div className="flex w-1/6">ROLE</div>
-            <div className="flex w-1/4">NAME</div>
-            <div className="flex w-1/6">CONTACT</div>
-            <div className="flex w-1/3">EMAIL</div>
-            <div className="flex w-1/12">LOC</div>
-            <div className="flex w-1/12">CALL</div>
-          </div>
-          <div className="flex max-w-fit text-[7px]">
-            <input
-              type="text"
-              className="border border-gray-300 px-1 py-1 text-center text-black"
-              placeholder="Camera Operator"
-            />
-            <input
-              type="text"
-              className=" border border-gray-300 px-1 py-1 text-center text-black"
-              placeholder="John Doe"
-            />
-            <input
-              type="text"
-              className="border border-gray-300 px-1 py-1 text-center text-black"
-              placeholder="555.555.5555"
-            />
-            <input
-              type="text"
-              className="border border-gray-300 px-1 py-1 text-center text-black"
-              placeholder="email@email.com"
-            />
-            <input
-              type="text"
-              className="border border-gray-300 px-1 py-1 text-center text-black"
-              placeholder="1"
-            />
-            <input
-              type="text"
-              className="border border-gray-300 px-1 py-1 text-center text-black"
-              placeholder="07:00"
-            />
-          </div>
-        </div>
-        <div className="flex w-1/2 justify-center bg-black py-1 text-[12px] font-bold text-white">
-          <span className=""> TALENT / CLIENT / AGENCY / VENDORS </span>
-        </div>
-      </div>
+      <GridBlock />
 
       <div className={styles.row}>
         <div className={styles.column}>
