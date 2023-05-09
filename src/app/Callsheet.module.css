@@ -1,0 +1,56 @@
+/* Style the call sheet container */
+.callSheet {
+    margin: 0 auto;
+    width: 8.5in;
+    height: 11in;
+    border: 1px solid black;
+    padding: 1in;
+}
+
+/* Style the separator row */
+.separatorRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5in;
+    margin-bottom: 0.5in;
+    background-color: grey;
+}
+
+.separatorRow hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: black;
+}
+
+/* Style the regular row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5in;
+}
+
+.row p {
+    margin: 0;
+}
+
+/* Style the column */
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the image column */
+.column img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.25in;
+}
+
+/* Style the empty row */
+.emptyRow {
+    height: 0.25in;
+}
