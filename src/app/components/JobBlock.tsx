@@ -4,14 +4,24 @@ import React, { useState, useEffect } from "react";
 
 type JobBlockProps = {
   setJobName: React.Dispatch<React.SetStateAction<string>>;
+  setDocketName: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const JobBlock: React.FC<JobBlockProps> = ({ setJobName }) => {
+const JobBlock: React.FC<JobBlockProps> = ({ setJobName, setDocketName }) => {
   const [jobName, setJobNameLocal] = useState("");
+  const [docketName, setDocketNameLocal] = useState("");
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleJobNameInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setJobNameLocal(event.target.value);
     setJobName(event.target.value);
+  };
+  const handleDocketNameInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setDocketNameLocal(event.target.value);
+    setDocketName(event.target.value);
   };
 
   return (
@@ -19,27 +29,29 @@ const JobBlock: React.FC<JobBlockProps> = ({ setJobName }) => {
       <div className="m-2">
         <div className="flex w-full flex-col">
           <div className="flex">
-            <div className="flex w-1/3 flex-col justify-center gap-2  px-2 text-xs">
-              <div className="border border-black p-2">
-                <div className="flex items-center justify-end gap-2">
-                  <span className="flex whitespace-nowrap align-baseline font-bold ">
-                    PRODUCT
-                  </span>
-                  <input
-                    type="text"
-                    className="w-40 rounded border border-gray-300 px-2 py-1 placeholder:bg-red-300 placeholder:text-black"
-                    value={jobName}
-                    onChange={handleInputChange}
-                    placeholder="..."
-                  />
-                </div>
-                <div className="flex items-center justify-end gap-2">
+            <div className="flex w-1/3 flex-col justify-center px-2 text-xs">
+              <div className="flex flex-col gap-1 border border-black p-2">
+                <div className="flex items-center justify-end gap-4">
                   <span className="flex whitespace-nowrap align-baseline font-bold ">
                     JOB NAME
                   </span>
                   <input
                     type="text"
+                    className="w-40 rounded border border-gray-300 px-2 py-1 placeholder:bg-red-300 placeholder:text-black"
+                    value={jobName}
+                    onChange={handleJobNameInputChange}
+                    placeholder="..."
+                  />
+                </div>
+                <div className="flex items-center justify-end gap-2">
+                  <span className="flex whitespace-nowrap align-baseline font-bold ">
+                    DOCKET
+                  </span>
+                  <input
+                    type="text"
                     className="w-40 rounded border border-gray-300 px-2 py-1 placeholder:bg-red-300 placeholder:text-black "
+                    value={docketName}
+                    onChange={handleDocketNameInputChange}
                     placeholder="..."
                   />
                 </div>
@@ -94,7 +106,7 @@ const JobBlock: React.FC<JobBlockProps> = ({ setJobName }) => {
                 <span className="flex w-full justify-center bg-black py-1 align-baseline text-xs font-bold text-white ">
                   LOCATIONS
                 </span>
-                <div className="flex flex-col items-center justify-end gap-2 py-1">
+                <div className="flex flex-col items-center justify-end gap-1 py-1">
                   <div className="flex items-center justify-end gap-2">
                     <span className="flex whitespace-nowrap  align-baseline font-bold ">
                       LOC 1

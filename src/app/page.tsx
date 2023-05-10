@@ -11,22 +11,26 @@ import DetailBlock from "./components/DetailBlock";
 
 const CallSheet = () => {
   const [jobName, setJobName] = useState("");
+  const [docketName, setDocketName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [companyAddress, setCompanyAddress] = useState("");
   return (
     <div className="m-auto mt-8 bg-white">
       <LogoBlock />
       <DateBlock />
-      <CompanyBlock />
-      <JobBlock setJobName={setJobName} />
+      <CompanyBlock
+        setCompanyName={setCompanyName}
+        setCompanyAddress={setCompanyAddress}
+      />
+      <JobBlock setJobName={setJobName} setDocketName={setDocketName} />
       <WeatherBlock />
       <GridBlock />
-      <DetailBlock jobName={jobName} />
-
-      <div className={styles.row}>
-        <div className={styles.column}>
-          <h2>Payment Info</h2>
-          <p>Payment details go here</p>
-        </div>
-      </div>
+      <DetailBlock
+        jobName={jobName}
+        docketName={docketName}
+        companyName={companyName}
+        companyAddress={companyAddress}
+      />
     </div>
   );
 };

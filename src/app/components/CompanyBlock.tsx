@@ -2,7 +2,31 @@
 
 import React, { useState, useEffect } from "react";
 
-const CompanyBlock = () => {
+type CompanyBlockProps = {
+  setCompanyName: React.Dispatch<React.SetStateAction<string>>;
+  setCompanyAddress: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const CompanyBlock: React.FC<CompanyBlockProps> = ({
+  setCompanyName,
+  setCompanyAddress,
+}) => {
+  const [companyName, setCompanyNameLocal] = useState("");
+  const [companyAddress, setCompanyAddressLocal] = useState("");
+
+  const handleCompanyNameInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setCompanyNameLocal(event.target.value);
+    setCompanyName(event.target.value);
+  };
+  const handleCompanyAddressInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setCompanyAddressLocal(event.target.value);
+    setCompanyAddress(event.target.value);
+  };
+
   return (
     <>
       <div className="m-2">
@@ -142,6 +166,8 @@ const CompanyBlock = () => {
                     <input
                       type="text"
                       className="w-full rounded border border-gray-300 px-2 py-1 font-bold placeholder:bg-red-300 placeholder:text-black"
+                      value={companyName}
+                      onChange={handleCompanyNameInputChange}
                       placeholder="Company Name"
                     />
                   </div>
@@ -150,6 +176,8 @@ const CompanyBlock = () => {
                     <input
                       type="text"
                       className="w-full rounded border border-gray-300 px-2 py-1 placeholder:bg-red-300 placeholder:text-black"
+                      value={companyAddress}
+                      onChange={handleCompanyAddressInputChange}
                       placeholder="Address"
                     />
                   </div>
