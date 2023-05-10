@@ -1,19 +1,41 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import DateBlock from "./DateBlock";
 
 const LogoBlock = () => {
   return (
     <>
-      <div className="m-2 flex rounded-md border py-2">
-        <div className="flex w-1/3 items-center justify-center">
-          <img src="client.png" alt="Client Logo" className="" />
+      <div className="mx-4 mt-4 flex items-center">
+        <div className="flex w-3/5 justify-between">
+          <div className="flex w-full items-center justify-center">
+            <Image
+              src="/client.png"
+              width={150}
+              height={60}
+              alt="client logo"
+            />
+          </div>
+          <div className="flex w-full items-center justify-center">
+            <Image
+              src="/agency.png"
+              width={150}
+              height={60}
+              alt="client logo"
+            />
+          </div>
+          <div className="flex w-full items-center justify-center">
+            <Image
+              src="/prodco.png"
+              width={150}
+              height={60}
+              alt="client logo"
+            />
+          </div>
         </div>
-        <div className="flex w-1/3 items-center justify-center">
-          <img src="agency.png" alt="Agency Logo" className="" />
-        </div>
-        <div className="flex w-1/3 items-center justify-center">
-          <img src="prodco.png" alt="Production Company Logo" className="" />
+        <div className="flex w-2/5">
+          <DateBlock />
         </div>
       </div>
     </>

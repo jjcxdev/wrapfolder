@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./CallSheet.module.css";
-import DateBlock from "./components/DateBlock";
 import LogoBlock from "./components/LogoBlock";
 import CompanyBlock from "./components/CompanyBlock";
 import JobBlock from "./components/JobBlock";
@@ -15,9 +13,8 @@ const CallSheet = () => {
   const [companyName, setCompanyName] = useState("");
   const [companyAddress, setCompanyAddress] = useState("");
   return (
-    <div className="m-auto mt-8 bg-white">
+    <div className="m-auto mt-8 rounded-lg bg-white">
       <LogoBlock />
-      <DateBlock />
       <CompanyBlock
         setCompanyName={setCompanyName}
         setCompanyAddress={setCompanyAddress}
