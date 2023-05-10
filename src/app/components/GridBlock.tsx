@@ -8,13 +8,13 @@ import TalentBlock from "./TalentBlock";
 const GridBlock = () => {
   return (
     <>
-      <div className="m-2">
-        <div className="flex w-full flex-col pb-1 ">
+      <div className="mx-4">
+        <div className="flex w-full flex-col">
           <div className="flex w-full ">
-            <div className="flex w-1/2 justify-center bg-black text-lg font-bold text-white">
+            <div className="flex w-1/2 justify-center bg-black text-sm font-bold text-white">
               <span className=""> PRODUCTION </span>
             </div>
-            <div className="flex w-1/2 justify-center bg-black text-lg font-bold text-white">
+            <div className="flex w-1/2 justify-center bg-black text-sm font-bold text-white">
               <span className=""> TALENT / CLIENT / AGENCY / VENDORS </span>
             </div>
           </div>
@@ -55,11 +55,11 @@ const GridBlock = () => {
           </div>
         </div>
         <div className="flex">
-          <div className="flex w-1/2 flex-col">
+          <div className="mb-1 flex w-1/2 flex-col">
             <DepartmentBlock />
             <CrewBlock />
           </div>
-          <div className="flex w-1/2 flex-col">
+          <div className="mb-1 flex w-1/2 flex-col">
             <DepartmentBlock />
             <TalentBlock />
           </div>

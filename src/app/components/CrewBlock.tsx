@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 const CrewBlock = () => {
   return (
     <>
-      <div className="my-1 flex w-full border border-black bg-white text-[8px]">
+      <div className="mt-1 flex w-full border border-black bg-white text-[8px]">
         <div className="flex w-1/6 justify-center border-r border-black">
           <input
             type="text"

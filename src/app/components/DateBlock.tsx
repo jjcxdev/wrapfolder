@@ -10,27 +10,23 @@ const DateBlock = () => {
     setIsClient(true);
   }, []);
   return (
-    <div className="flex w-full items-center">
-      <div className="flex w-1/3 justify-center text-3xl">
-        <h2>CALL SHEET</h2>
-      </div>
-
-      <div className="flex w-1/3 items-center justify-center">
-        <span className="mx-1 text-3xl"> Day </span>
+    <div className="flex w-full flex-col items-center border border-black">
+      <div className="flex items-center justify-center">
+        <span className="text-xl"> Day </span>
         <input
           type="text"
-          className="w-20  px-2 py-1 text-center text-6xl font-bold placeholder:bg-red-300 placeholder:text-black"
+          className="w-10 text-center text-2xl font-bold placeholder:bg-red-300 placeholder:text-black"
           placeholder="..."
         />
-        <span className="mx-1 text-3xl"> of </span>
+        <span className="mx-1 text-xl"> of </span>
         <input
           type="text"
-          className="w-20  px-2 py-1 text-center text-6xl font-bold placeholder:bg-red-300 placeholder:text-black"
+          className="w-10 text-center text-2xl font-bold placeholder:bg-red-300 placeholder:text-black"
           placeholder="..."
         />
       </div>
 
-      <div className="m-2 flex w-1/3 rounded-md border bg-black px-2 text-lg">
+      <div className="flex w-full rounded-md bg-black text-lg">
         {isClient && <DatepickerComponent />}
       </div>
     </div>
